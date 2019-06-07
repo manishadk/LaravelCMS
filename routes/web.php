@@ -21,22 +21,15 @@ Route::post('admincontrol/login', ['as'=>'login', 'uses'=>'Auth\LoginController@
 Route::group(['prefix' => 'admin/', 'as' =>'admin.', 'middleware' => 'auth'], function(){
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'Admin\AdminController@index' ]);
+Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'Admin\DashboardController@index' ]);
 
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return redirect('admincontrol/login');
 });
 
-
-
-//Route::get('admin','AdminController@index');
-
-
-// Route::get('/register', ['as' => 'register', 'uses' => 'Admin\AdminController@test' ]);
-
-// Route::get('/login', ['as' => 'login', 'uses' => 'App\Http\Controllers\Auth\LoginController@showLoginForm '])
 
 
 

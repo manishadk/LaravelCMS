@@ -13,16 +13,12 @@ class AdminController extends Controller
 		$this->middleware('auth');
 	}
 
-	public function index()
-	{
-		// dd('rtrr');
-		return view('admin.fixed');
-	}
-
-	// public function test(){
-	// 	return view('admin/layouts/fixed');
-
+	// public function index()
+	// {
+	// 	// dd('rtrr');
+	// 	return view('admin.fixed');
 	// }
+
 }
 
 
